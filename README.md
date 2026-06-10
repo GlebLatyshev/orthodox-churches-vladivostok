@@ -36,5 +36,5 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/ВАШ_НИК/orthodox-churches-vladivostok.git
+git clone https://github.com/GlebLatyshev/orthodox-churches-vladivostok.git
 cd orthodox-churches-vladivostok
