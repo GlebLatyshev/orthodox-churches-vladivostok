@@ -1,4 +1,15 @@
+# nixpacks.toml
 [phases.setup]
+nixPkgs = ["nodejs_20"]
+
+[phases.install]
+cmd = "cd backend && npm ci --omit=dev && cd ../frontend && npm ci"
+
+[phases.build]
+cmd = "cd frontend && npm run build"
+
+[phases.start]
+cmd = "cd backend && npm start"[phases.setup]
 nixPkgs = ["nodejs_20"]
 
 [phases.install]
