@@ -11,7 +11,6 @@ import {
   FaCalendarAlt,
   FaPhoneAlt,
   FaEnvelope,
-  FaGlobe,
   FaGithub,
   FaTelegram,
   FaVk
