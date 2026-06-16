@@ -98,7 +98,7 @@ app.use((err, req, res, next) => {
 
 // Запуск сервера
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n🚀 Сервер успешно запущен на порту ${PORT}`);
   console.log(`📝 Режим: ${process.env.NODE_ENV || 'development'}`);
   console.log(`🌐 Адрес: http://localhost:${PORT}`);
