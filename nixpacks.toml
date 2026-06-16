@@ -1,29 +1,27 @@
 # nixpacks.toml
+
 [phases.setup]
 nixPkgs = ["nodejs_20"]
 
 [phases.install]
-cmd = "cd backend && npm ci --omit=dev && cd ../frontend && npm ci"
+cmds = [
+  "cd backend && npm install",
+  "cd frontend && npm install"
+]
 
 [phases.build]
-cmd = "cd frontend && npm run build"
+cmds = [
+  "cd frontend && npm run build"
+]
 
 [phases.start]
-cmd = "cd backend && npm start"[phases.setup]
-nixPkgs = ["nodejs_20"]
+cmd = "cd backend && npm start"
 
-[phases.install]
-cmds = ["npm ci --omit=dev"]
+# Настройка окружения
+[environment]
+NODE_ENV = "production"
+PORT = 5000
 
-[phases.build]
-cmds = []
-
-[start]
-cmd = "npm start"
-
+# Куда Nixpacks должен смотреть для статики
 [build]
-nixPkgs = ["nodejs_20"]
-
-[metrics]
-cpu = 512
-memory = 1024
+publishDir = "frontend/build"
