@@ -18,10 +18,10 @@ export default function AdminPage() {
   
   // Форма для храма
   const [churchForm, setChurchForm] = useState({
-    name: '', name_full: '', address: '', description: '',
-    history: '', architecture: '', shrines: '', abbot: '',
-    phone: '', email: '', website: '', image_url: '', lat: '', lng: ''
-    
+  name: '', name_full: '', address: '', description: '',
+  history: '', architecture: '', shrines: '', abbot: '',
+  phone: '', email: '', website: '', image_url: '', 
+  lat: '', lng: '', map_iframe: ''
   });
 
   // Форма для расписания
