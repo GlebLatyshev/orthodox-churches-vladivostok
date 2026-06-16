@@ -1,6 +1,6 @@
 // src/components/feedback/ReviewsSection.jsx
 import React, { useState, useEffect } from 'react';
-import { FaStar, FaStarHalfAlt, FaRegStar, FaUser, FaCalendarAlt, FaCheckCircle, FaClock } from 'react-icons/fa';
+import { FaUser, FaCalendarAlt, FaCheckCircle } from 'react-icons/fa';
 
 export default function ReviewsSection({ churchId }) {
   const [reviews, setReviews] = useState([]);
