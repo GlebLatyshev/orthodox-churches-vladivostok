@@ -2,22 +2,12 @@
   "name": "orthodox-churches-vladivostok",
   "version": "1.0.0",
   "description": "Веб-приложение для православных храмов Владивостока",
-  "main": "backend/server.js",
   "scripts": {
-    "build": "npm run build --workspace=frontend",
-    "start": "npm start --workspace=backend",
-    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm start --workspace=frontend\"",
-    "install-all": "npm install --workspaces",
-    "postinstall": "npm run install-all"
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "install-all": "cd backend && npm install && cd ../frontend && npm install"
   },
-  "workspaces": [
-    "backend",
-    "frontend"
-  ],
   "keywords": ["orthodox", "churches", "vladivostok"],
   "author": "Your Name",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^8.2.2"
-  }
+  "license": "ISC"
 }
