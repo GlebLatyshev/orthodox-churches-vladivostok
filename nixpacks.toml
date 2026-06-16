@@ -17,11 +17,9 @@ cmds = [
 [phases.start]
 cmd = "cd backend && npm start"
 
-# Настройка окружения
 [environment]
 NODE_ENV = "production"
 PORT = 5000
 
-# Куда Nixpacks должен смотреть для статики
 [build]
 publishDir = "frontend/build"
